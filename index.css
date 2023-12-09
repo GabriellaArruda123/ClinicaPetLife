@@ -1,0 +1,202 @@
+/*LINGUAGEM DE ESTILIZAÇÃO*/
+/*remover estilo padrão*/
+* {
+    box-sizing: border-box;
+    /*box-sizing: border-box;que indica que o tamanho agora levará em conta até a borda -- ou seja, o width será a soma do conteúdo com a borda e o padding.*/
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #263138;
+
+}
+
+header {
+    background-color: #ff9a6c;
+    display: flex; /*como os objetos estão dispostos dentro dele*/
+    align-items: center; /*na vertical e horizontal*/
+    justify-content: space-between; /*justificar*/
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    
+}
+
+header nav a {
+    color: #ffffff;
+    font-weight: 600; /*mudar para negrito, através do peso da fonte*/
+    padding: 32px;
+    text-decoration: none; /*sem sublinhado*/
+}
+
+
+#inicio {
+    display: flex; /*exibição flexível*/
+    align-items: center;
+    gap: 32px; /*distanciada da imagem por causa do display:flex que foi possível*/
+    /*espaçamento / entre-ferro*/
+    /*topo, direita, baixo, esquerda*/
+    padding: 80px 80px 128px 80px;
+    position: relative;
+    /**/
+
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    /*negrito*/
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo{
+    line-height: 150%; /*altura de linha*/
+    margin-bottom: 32px;
+}
+
+.botao{
+    background-color: #ff725e;
+    border-radius: 8px;
+    color: #ffffff;
+    /*vertical, horizontal*/
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+.botao-trans{
+    background-color: transparent;
+    color: #ff725e;
+    /*verical horizontal*/
+    padding: 16px 32px;
+    text-underline-offset: 8px; /*leve espaçada no underline*/
+}
+
+.absolute{
+    position:absolute;/*vai determinar a posição de forma manual*/
+    bottom:0;
+    left: 0;
+    width: 100%;/*largura*/
+    z-index: -10;
+}
+
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    /*espaçamento / entre-ferro*/
+    /*topo, direita, baixo, esquerda*/
+    padding: 64px 80px;
+}
+
+#clinica li{
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+#farmacia {
+    padding: 64px 80px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo{
+    max-width: 950px;/*máximo em que ele pode chegar no tamanho*/
+    margin: 0 auto; /*vai calcular automaticamente a margem da esquerda e direita*/
+}
+
+#duvidas {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+.duvida{
+    position: relative; /*todos aqueles que forem absolutos em relação a esta class, vai fazer referência a ela, limitado a ela*/
+}
+.duvida h3 {
+    border: 2px solid #ff725e;
+    border-radius: 8px;
+    cursor: pointer; /*mão do mouse*/
+    padding: 12px;
+}
+
+.duvida img{
+    position: absolute;
+    top: 20px;
+    right: 24px;
+}
+
+.duvida .paragrafo{
+    border-right: 1px solid #ff725e;
+    border-bottom: 1px solid #ff725e;
+    border-left: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px; /*grudar na parte de cima*/
+    padding: 0 24px; /*vertical horizontal*/
+    opacity: 0;
+    height:0;
+    overflow: hidden; /*quando as informações 'transbordarem' o limite, ela deve ficar escondida*/
+    transition: .2s; /*uma leve animação na abertura e fechamento*/
+}
+
+.duvida.ativa .paragrafo{
+    height: fit-content; /*fazer o conteúdo caber*/
+    opacity:1;
+    padding: 24px;
+}
+
+footer{
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex; /*fica um ao lado do outro*/
+    justify-content: space-between; /*espaçar entre os elementos*/
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo{
+    display: block; /*consegue fazer aleração, que antes não aceitava pelo padrão*/
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a {
+    color: #263138;
+    display: block; /*quebra de linha, o flex faz com que fique um ao lado do outrom, o block deixa um acima do outro*/
+    margin-bottom: 16px;
+    text-decoration: none;
+    
+}
+
+footer p{
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+footer p a {
+    color:#263138;
+    text-decoration: none;
+}
+
+#copyright{
+    background-color: #263138;
+    color:#ffffff;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyright a{
+    color: #ff9a6c;
+}
+
